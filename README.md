@@ -1,5 +1,7 @@
 # Homarr on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/GSmCSk?utm_medium=integration&utm_source=button&utm_campaign=homarr)
+
 Railway template for [Homarr](https://github.com/homarr-labs/homarr), a self-hosted dashboard for your servers and services.
 
 ## What it deploys
