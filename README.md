@@ -1,6 +1,6 @@
 # Homarr on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/GSmCSk?utm_medium=integration&utm_source=button&utm_campaign=homarr)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/mybFUi?utm_medium=integration&utm_source=button&utm_campaign=homarr)
 
 Railway template for [Homarr](https://github.com/homarr-labs/homarr), a self-hosted dashboard for your servers and services.
 
@@ -10,7 +10,7 @@ One service, **Homarr**, built from this repo's `Dockerfile`:
 
 - Homarr **2.12.0**, the official image pinned by digest: `ghcr.io/homarr-labs/homarr:v2.12.0@sha256:44c480afe9df57ce9de44cb664aec53199ea19926ebdd4e590c7b2c2c0a5ef79`.
 - A Railway volume at `/appdata` for the SQLite database, the internal Redis dump and trusted certificates.
-- A Railway domain, health check `/api/health/live`, restart on failure (all in `railway.json`).
+- A Railway domain, health check `/api/health/live` and restart on failure, set on the template's service config.
 
 `railway-start.sh` runs before the image's own entrypoint. It moves nginx onto Railway's `PORT` (Next.js stays on its internal port 3000) and runs the database migrations. On the first start it creates an `admin` user with Homarr's own CLI, sets its password to `HOMARR_ADMIN_PASSWORD` and names its group `admins`. Without this step, a fresh Homarr lets whoever opens it first claim it. Docker discovery is off, because Railway has no Docker socket.
 
