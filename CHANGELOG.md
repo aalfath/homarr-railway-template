@@ -12,3 +12,4 @@ Read the entry before you apply an update in Railway.
 ## Unreleased
 
 - README: Deploy on Railway button. No change to the running service.
+- Removed `railway.json`: Railway no longer reads it (Config as Code is deprecated). The health check `/api/health/live` and the restart policy are now on the template's service config. No change to the running service.
